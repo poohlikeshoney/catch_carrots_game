@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  overflow: hidden;
+}
 button {
   border: none;
   outline: none;
@@ -49,6 +52,8 @@ h1.title {
   padding-top: 4px;
   margin-top: 10px;
   border-radius: 10px;
+  visibility: hidden;
+  user-select: none;
 }
 .game__score {
   width: 50px;
@@ -61,12 +66,14 @@ h1.title {
   border: 3px solid black;
   margin-top: 10px;
   padding-top: 6px;
+  visibility: hidden;
+  user-select: none;
 }
 .game__field {
+  position: relative;
   width: 100%;
   height: 100%;
   margin-top: 90px;
-  opacity: 0.4;
 }
 .popup-hidden {
   display: none;
@@ -94,4 +101,13 @@ h1.title {
   display: block;
   font-size: 30px;
   margin-top: 10px;
+}
+.carrot,
+.bug {
+  cursor: pointer;
+  transition: transform 100ms ease-in;
+}
+.carrot:hover,
+.bug:hover {
+  transform: scale(1.1);
 }
